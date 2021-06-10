@@ -8,7 +8,7 @@ Reagordi::$app->context->setRobots( 'noindex,follow' );
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?= Reagordi::getInstance()->getContext()->getHead() ?>
+    <?= Reagordi::$app->context->getHead() ?>
 </head>
 <body>
     <h1>Упс! Страница не найдена</h1>

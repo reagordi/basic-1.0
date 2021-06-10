@@ -7,7 +7,7 @@ if ( !Reagordi::$app->context->request->isAjaxRequest() ):
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
 <head>
-    <?= Reagordi::getInstance()->getContext()->getHead() ?>
+    <?= Reagordi::$app->context->getHead() ?>
 </head>
 <body>
 <?php endif ?>

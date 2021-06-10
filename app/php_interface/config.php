@@ -1,6 +1,7 @@
 <?php
 return [
     'id' => 'basic',
+    'charset' => 'utf-8',
     'site_online' => true,
     'default_lang' => 'ru',
     'site_name' => 'Reagordi Basic',
@@ -22,4 +23,5 @@ return [
     'modules' => [
 
     ],
+    'version' => '1.0'
 ];

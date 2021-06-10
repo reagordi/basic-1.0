@@ -2,14 +2,11 @@
 
 /** @var $collector Phroute\Phroute\RouteCollector */
 
-use Reagordi\Framework\Config\Config;
-use Reagordi\Framework\Web\View;
-
 $collector->get(
   '',
   function () {
-    Reagordi::getInstance()->getContext()->setTitle('Reagordi Basic');
-    Reagordi::getInstance()->getContext()->setDescription('Reagordi Basic Demo');
+    Reagordi::$app->context->setTitle('Reagordi Basic');
+    Reagordi::$app->context->setDescription('Reagordi Basic Demo');
 
     ob_start();
 
@@ -18,8 +15,8 @@ $collector->get(
 <a href="https://reagordi.com">go Reagordi site</a>
     <?php
 
-    View::getInstance()->assign('conteiner', ob_get_clean());
+    Reagordi::$app->context->view->assign('conteiner', ob_get_clean());
 
-    return View::getInstance()->fech();
+    return Reagordi::$app->context->view->fech();
   }
 );
